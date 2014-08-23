@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="/static/jquery.min.js"></script>
+    <script src="/static/socket.io.js"></script>
+    <script src="/static/dixit.js"></script>
+    <script>WEB_SOCKET_SWF_LOCATION = '/static/WebSocketMain.swf';</script>
+    <link href="static/dixit.css" rel="stylesheet">
+</head>
+<body>
+    <div id="global">
+        <div id="header_row">
+            Dixit online
+        </div>
+        <div id="middle">
+            <div id="scoreboard">
+                <div id="result_outer">
+                </div>
+            </div>
+
+            <div id="viewport">
+                <div class="viewport_inner">
+                    <img src='static/azumanga.png'>
+                    <div class="selector_outer">
+                        <div class="selector"><a id="select" href='#'>Select</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="chat">
+                <div id="log">
+                    <div id="log_inner">
+                        <div class="system">You should <a id="login_link" href="#" class="popup-link-login">login</a></div>
+                    </div>
+                </div>
+                <div class="sender">
+                    <form id="msg_form"><input id="msg" placeholder="Type your message"></input></form>
+                </div>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+        <div id="cardsblock_row">
+        </div>
+    </div>
+    <div class="popup-box" id="popup-box-login">
+        <div class="close">X</div>
+        <div class="top">
+            <h2>Login</h2>
+        </div>
+        <div class="bottom">
+            Enter your nickname:
+            <form id="nick_form"><input id="nick" placeholder="Nickname"></input></form>
+        </div>
+    </div>
+    <div class="popup-box" id="popup-box-master">
+        <div class="close">X</div>
+        <div class="top">
+            <h2>Master mode</h2>
+        </div>
+        <div class="bottom">
+            Enter mastercode:
+            <form id="master_form"><input id="master" placeholder="Mastercode"></input></form>
+        </div>
+    </div>
+    <div class="popup-box" id="popup-box-association">
+        <div class="close">X</div>
+        <div class="top">
+            <h2>Association</h2>
+        </div>
+        <div class="bottom">
+            Enter our association:
+            <form id="association_form"><input id="association" placeholder="Association"></input></form>
+        </div>
+    </div>
+</body>
+</html>
